@@ -1,0 +1,47 @@
+<!-- Test Configuration: The testng.xml file defines test suites, test classes, and methods to execute, organizing tests into logical groups.
+
+Parameterization: It allows passing parameters (like browser type or URLs) to tests and configures parallel execution (e.g., parallel="tests").
+
+Execution Control: It enables selective test runs (inclusion/exclusion), dependency ordering, and integrates listeners for reporting/logging.
+
+It acts as the "master script" for TestNG test execution.  -->
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite"  >
+    <listeners>
+<!--&lt;!&ndash;        <listener class-name="Orangepractice.Listeners.ListenersClass" />&ndash;&gt;-->
+<!--&lt;!&ndash;        <listener class-name="Orangepractice.Listeners.MethodInterceptor" />&ndash;&gt;-->
+        <listener class-name="OrangeHRM.com.tmb.Listeners.MethodInterceptor" />
+        <listener class-name="Orangepractice.Listeners.ListenersClass" />
+        <listener class-name="OrangeHRM.com.tmb.Listeners.AnnotationTransformer" />
+    </listeners>
+
+    <test thread-count="1" name="Test" parallel="methods">
+        <classes>
+<!--            <class name="Orangepractice.Listeners.Runner" />-->
+            <class name="OrangeHRM.com.tmb.test.OrangeHrmTest" />
+        </classes>
+    </test> <!--Test -->
+
+</suite>  <!--Suite -->
+
+
+
+        <!-- when i run 1st package OrangeHRM.com.tmb  then i use comment testng.xml-->
+
+        <!--        -->
+<!--        <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >-->
+<!--<suite name="Suite" verbose="1" >-->
+<!--<test name="MyTest">-->
+<!--    <classes>-->
+<!--        &lt;!&ndash;            <class name="daraz.test.First_Page" />&ndash;&gt;-->
+<!--        &lt;!&ndash;            <class name="daraz.test.Landing_Page" />&ndash;&gt;-->
+<!--        &lt;!&ndash;            <class name="daraz.test.Test_page" />&ndash;&gt;-->
+<!--        &lt;!&ndash;            <&#45;&#45; Orange page test&ndash;&gt;&ndash;&gt;-->
+<!--        <class name="OrangeHRM.com.tmb.test.HomePageTest" />-->
+<!--        <class name="OrangeHRM.com.tmb.test.LoginPage" />-->
+<!--        <class name="OrangeHRM.com.tmb.test.OrangeHrmTest" />-->
+<!--    </classes>-->
+<!--</test>-->
+<!--</suite>-->
