@@ -1,0 +1,12 @@
+package Amazon.Enums;
+
+public enum ConfigProperties {
+    URL,
+    OVERRIDEREPORTS,
+    PASSEDSTEPSSCREENSHOTS,
+    FAILEDSTEPSSCREENSHOTS,
+    SKIPEDSTEPSSCREENSHOTS,
+    RETRYFAILEDTESTS,
+    BROWSER;
+
+}
