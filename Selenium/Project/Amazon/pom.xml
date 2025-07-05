@@ -1,0 +1,197 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.example</groupId>
+  <artifactId>selenium-example</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <dependencies>
+
+      <dependency>
+          <groupId>org.apache.logging.log4j</groupId>
+          <artifactId>log4j-core</artifactId>
+          <version>2.23.1</version>
+      </dependency>
+
+      <dependency>
+          <groupId>commons-io</groupId>
+          <artifactId>commons-io</artifactId>
+          <version>2.13.0</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v85 -->
+      <dependency>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-devtools-v85</artifactId>
+          <version>4.23.1</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v134 -->
+      <dependency>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-devtools-v134</artifactId>
+          <version>4.30.0</version>
+      </dependency>
+
+      <!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java &ndash;&gt;-->
+      <dependency>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-java</artifactId>
+          <version>4.30.0</version>
+      </dependency>
+
+
+
+
+      <!-- Apache POI for Excel 2007+ (XSSF) -->
+      <dependency>
+          <groupId>org.apache.poi</groupId>
+          <artifactId>poi-ooxml</artifactId>
+          <version>5.2.3</version>
+      </dependency>
+      <!-- Apache POI for Excel 97-2003 (HSSF) -->
+      <dependency>
+          <groupId>org.apache.poi</groupId>
+          <artifactId>poi</artifactId>
+          <version>5.2.3</version>
+      </dependency>
+      <!-- For handling XML-based formats -->
+      <dependency>
+          <groupId>org.apache.poi</groupId>
+          <artifactId>poi-ooxml-schemas</artifactId>
+          <version>4.1.2</version>
+      </dependency>
+      <!-- For handling OPC (Open Packaging Conventions) -->
+      <dependency>
+          <groupId>org.apache.xmlbeans</groupId>
+          <artifactId>xmlbeans</artifactId>
+          <version>5.1.1</version>
+      </dependency>
+      <!-- Additional dependencies -->
+      <dependency>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-collections4</artifactId>
+          <version>4.4</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
+      <dependency>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-compress</artifactId>
+          <version>1.27.1</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+      <dependency>
+          <groupId>com.aventstack</groupId>
+          <artifactId>extentreports</artifactId>
+          <version>5.1.1</version>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-simple</artifactId>
+          <version>2.0.16</version>
+          <scope>test</scope>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+      <dependency>
+          <groupId>io.github.bonigarcia</groupId>
+          <artifactId>webdrivermanager</artifactId>
+          <version>5.8.0</version>
+      </dependency>
+
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.10.2</version>
+      <scope>test</scope>
+    </dependency>
+
+
+    <dependency>
+        <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.14.0</version>
+
+    </dependency>
+
+
+
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>3.24.2</version> <!-- Use the latest version if needed -->
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
+      <version>2.10.10</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>RELEASE</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.10.2</version>
+      <scope>compile</scope>
+    </dependency>
+
+
+  </dependencies>
+
+  <repositories>
+    <repository>
+      <id>central</id>
+      <name>Maven Central</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+    </repository>
+
+
+      <repository>
+        <id>central</id>
+        <url>https://repo1.maven.org/maven2</url>
+      </repository>
+
+
+  </repositories>
+
+  <build>
+    <plugins>
+      <!-- Maven Compiler Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+
+
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.2.5</version>
+      <configuration>
+        <suiteXmlFiles>
+          <suiteXmlFile>testng.xml</suiteXmlFile> <!-- If using TestNG -->
+        </suiteXmlFiles>
+      </configuration>
+    </plugin>
+  </plugins>
+  </build>
+
+
+</project>

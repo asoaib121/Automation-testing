@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite"  >
+    <listeners>
+        <listener class-name="Amazon.listeners.MethodInterceptor" />
+        <listener class-name="Amazon.listeners.ListenerClass" />
+        <listener class-name="Amazon.listeners.AnnotationTransformers" />
+    </listeners>
+
+    <test thread-count="1" name="Test" parallel="methods">
+        <classes>
+            <class name="Amazon.tests.AmazonDemoTest" />
+        </classes>
+    </test> <!--Test -->
+
+</suite>  <!--Suite -->
